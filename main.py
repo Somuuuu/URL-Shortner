@@ -27,7 +27,7 @@ def post(long):
     result = db.table("url").insert({"long": long, "short": shorter}).execute()
     return "http://127.0.0.1:8000/"+ result.data[0]['short']
     
-    
+     
 @app.get("/{short}")
 def get(short):
     result = db.table("url").select("long").eq("short", short).execute()
