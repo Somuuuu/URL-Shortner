@@ -1,5 +1,4 @@
 import streamlit as st 
-import pyperclip
 from api import post
 
 
@@ -22,7 +21,4 @@ if short:
     col, col1 = st.columns([5,1])
     with col:
         st.write(short)
-    with col1:
-        if st.button("copy", icon="📋", type="tertiary"):
-            pyperclip.copy(short)
-            st.toast("Copied To Clipboard")
+   
